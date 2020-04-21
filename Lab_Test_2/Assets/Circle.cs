@@ -4,7 +4,8 @@ using UnityEngine;
 
 public class Circle : MonoBehaviour
 {
-    public GameObject prefab;
+    public GameObject lights;
+    public GameObject car;
 
     public int number_of_lights = 10;
 
@@ -27,8 +28,12 @@ public class Circle : MonoBehaviour
             Quaternion rotation = Quaternion.Euler(0, angle_degrees, 0);
 
 
-            Instantiate(prefab, pos, rotation);
+            Instantiate(lights, pos, rotation);
+
+           
         }
+
+        Instantiate(car, transform.position, transform.rotation);
     }
 
 }

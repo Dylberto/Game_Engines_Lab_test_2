@@ -132,8 +132,8 @@ GameObject:
   - component: {fileID: 536086961}
   - component: {fileID: 536086960}
   m_Layer: 0
-  m_Name: GameObject
-  m_TagString: Untagged
+  m_Name: Manager
+  m_TagString: Manager
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -150,7 +150,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4a286408e637dd4696ad85bb9320612, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  prefab: {fileID: 7874157482706593377, guid: f87a530d3dedaa14eb4ef2deffd9aee0, type: 3}
+  lights: {fileID: 7874157482706593377, guid: f87a530d3dedaa14eb4ef2deffd9aee0, type: 3}
+  car: {fileID: 4748779579619363781, guid: 53611ded9de0f6f4494123821fe91fd0, type: 3}
   number_of_lights: 10
   radius: 10
 --- !u!4 &536086961
@@ -166,6 +167,36 @@ Transform:
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 3
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &590057283
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 590057284}
+  m_Layer: 0
+  m_Name: Start_position
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &590057284
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 590057283}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &705507993
 GameObject:

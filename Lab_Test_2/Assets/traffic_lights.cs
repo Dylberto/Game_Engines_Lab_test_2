@@ -6,33 +6,69 @@ public class traffic_lights : MonoBehaviour
 {
     private Renderer ren;
 
-    private int start_color;
+    public int state;
+    public int new_state;
+
+    private Color green = new Color(0, 255, 0);
+    private Color yellow = new Color(255, 255, 0);
+    private Color red = new Color(255, 0, 0);
+
 
 
     void Start()
     {
         ren = gameObject.GetComponent<Renderer>();
 
-        start_color = Random.Range(1 ,4);
+        state = Random.Range(1, 4);
+
     }
 
     void Update()
     {
-        if(start_color == 1f)
-        {
-            ren.material.color = new Color(0, 255, 0);
-        }
+        go();
 
-        if(start_color == 2f)
-        {
-            ren.material.color = new Color(255, 255, 0);
-        }
+        wait();
 
-        if (start_color == 3f)
+        stop();
+
+    }
+
+    void go()
+    {
+        if (state == 1)
         {
-            ren.material.color = new Color(255, 0, 0);
+            ren.material.color = green;
+
+            gameObject.tag = "Target";
         }
 
     }
+
+    void wait()
+    {
+        if (state == 2)
+        {
+            ren.material.color = yellow;
+            gameObject.tag = "Untagged"; 
+
+
+        }
+
+
+    }
+
+    void stop()
+    {
+        if (state == 3)
+        {
+            ren.material.color = red;
+            gameObject.tag = "Untagged";
+        }
+
+
+    }
+
+
+ 
 
 }
