@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 471319599767195379}
   - component: {fileID: 1982606511799778388}
   - component: {fileID: 1502396607936080831}
+  - component: {fileID: 8217719806100809251}
   m_Layer: 0
   m_Name: Traffic Light
   m_TagString: Untagged
@@ -94,3 +95,15 @@ CapsuleCollider:
   m_Height: 2
   m_Direction: 1
   m_Center: {x: 0.000000059604645, y: 0, z: -0.00000008940697}
+--- !u!114 &8217719806100809251
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7874157482706593377}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 79d8c0256f404af40a0421bb771d5868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
