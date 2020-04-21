@@ -34,15 +34,20 @@ public class car : MonoBehaviour
             random_target = targets[Random.Range(0, targets.Length)].transform;
         }
 
+        if(random_target.tag != "Target")
+        {
+            random_target = targets[Random.Range(0, targets.Length)].transform;
+        }
+
     }
 
     void move()
     {
         transform.position = Vector3.MoveTowards(transform.position, random_target.position, speed * Time.deltaTime);
 
-        Vector3 direction = random_target.position - transform.position;
-        Quaternion rotation = Quaternion.LookRotation(direction);
-        transform.rotation = rotation;
+       Vector3 direction = random_target.position - transform.position;
+       Quaternion rotation = Quaternion.LookRotation(direction * -1);
+       transform.rotation = Quaternion.Lerp(transform.rotation, rotation, speed * Time.deltaTime);
     }
 
 

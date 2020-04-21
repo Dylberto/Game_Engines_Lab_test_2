@@ -21,54 +21,59 @@ public class traffic_lights : MonoBehaviour
 
         state = Random.Range(1, 4);
 
-    }
-
-    void Update()
-    {
-        go();
-
-        wait();
-
-        stop();
-
-    }
-
-    void go()
-    {
-        if (state == 1)
+        if(state == 1)
         {
+            StartCoroutine(go());
+        }
+
+        if(state == 2)
+        {
+
+            StartCoroutine(wait());
+
+        }
+
+        if(state == 3)
+        {
+            StartCoroutine(stop());
+        }
+    }
+
+    IEnumerator go()
+    {
+        
             ren.material.color = green;
-
             gameObject.tag = "Target";
-        }
+            yield return new WaitForSeconds(Random.Range(5, 11));
+            StartCoroutine(wait());
 
     }
 
-    void wait()
+    IEnumerator wait()
     {
-        if (state == 2)
-        {
+       
+        
             ren.material.color = yellow;
-            gameObject.tag = "Untagged"; 
+            gameObject.tag = "Untagged";
+            yield return new WaitForSeconds(4);
+            StartCoroutine(stop());
 
-
-        }
-
-
+        
     }
 
-    void stop()
+    IEnumerator stop()
     {
-        if (state == 3)
-        {
+      
+        
             ren.material.color = red;
             gameObject.tag = "Untagged";
-        }
+            yield return new WaitForSeconds(Random.Range(5, 11));
+            StartCoroutine(go());
 
-
+        
     }
 
 
- 
+
 
 }

@@ -151,7 +151,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   lights: {fileID: 7874157482706593377, guid: f87a530d3dedaa14eb4ef2deffd9aee0, type: 3}
-  car: {fileID: 4748779579619363781, guid: 53611ded9de0f6f4494123821fe91fd0, type: 3}
+  car: {fileID: 446400012425974176, guid: 82d5ced4553decc4b90218ed8ce173f5, type: 3}
   number_of_lights: 10
   radius: 10
 --- !u!4 &536086961
